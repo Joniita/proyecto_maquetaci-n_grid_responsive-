@@ -1,0 +1,299 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#container{
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid rgba(225, 225, 226, 0.8);
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 600px;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 120px;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+}
+
+
+.logo{
+    flex-grow: 1;
+    flex-basis: auto;
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 35px;
+    
+    padding: 10px;
+    margin-left: 20px;
+    color: black;
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+
+}
+
+.logo h1{
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 35px;
+
+}
+
+#menu{
+    flex-grow: 1;
+    flex-basis: auto;
+    height: 100%;
+    padding-right: 20px;
+
+    display: flex;
+    justify-content: end;
+  }
+
+
+
+#menu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    list-style: none;
+}
+
+#menu a{
+    color: #444;
+    text-transform: uppercase;
+    padding: 15px;
+    transition: all 300ms;
+}
+
+#menu a:hover{
+    background-color: #ccc;
+    color: white;
+}
+
+#content{
+    
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#projects{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 80%;
+    
+}
+
+.project{
+    flex-grow: 1;
+    flex-basis: 250px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    
+}
+
+.project img{
+    width: 100%;
+}
+
+.project_info{
+    padding: 10px;
+}
+
+.project_info a{
+    font-size: 16px;
+    color: black;
+    transition: all 300ms;
+}
+
+.project_info a:hover{
+    color: green;
+
+}
+
+.project_info p{
+    font-size: 16px;
+    color: gray;
+}
+
+#aside{
+    flex-basis: 15%;
+    margin-right: 30px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#aside h2{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+    text-align: center;
+}
+
+#aside ul{
+    list-style: none;
+}
+
+#aside ul li{
+    padding-bottom: 20px;
+}
+
+#aside a{
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+    color: #444;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+
+#aside a:hover{
+    background-color: #444;
+    color: #eee;
+}
+
+#footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: 120px;
+    align-items: center;
+    border-top: 1px solid rgba(225, 225, 226, 0.8);
+}
+
+#footer .logo{
+    opacity: 0.5;
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+#footer .info{
+    flex-grow: 1;
+    text-align: right;
+    padding: 10px;
+    margin-right: 20px;
+    color: #444;
+}
+
+@media (max-width: 900px) {
+    #header{
+        flex-direction: column;
+    }
+
+    .logo{
+        margin-left: 0px;
+        padding: 16px;
+        padding-top: 5px;
+    }
+
+    #menu{
+        height: auto;
+        padding-right: 0px;
+    }
+
+    #menu ul{
+        align-items: flex-start;
+    }
+
+    #menu a{
+        padding: 20px;
+    }
+}
+
+@media (max-width:750px){
+    #content{
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        
+    }
+
+    #aside{
+        margin-right: 0px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+        border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+    }
+
+    .project{
+        margin-left: 20px;
+    }
+
+    #footer{
+        flex-direction: column;
+    }
+
+    #footer .logo{
+       padding-top: 10px;
+    }
+
+    #footer .info{
+        margin: 0px auto;
+    }
+}
+
+@media (max-width:552px){
+    #header{
+        height: auto;
+    }
+
+    .logo{
+        padding-bottom: 6px;
+    }
+
+
+    #menu ul{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 5px;
+        border-top: 1px solid rgba(225, 225, 226, 0.8);
+    }
+
+    #menu ul li {
+        margin: -20px;
+    }
+
+    #menu a{
+        font-size: 15px;
+        margin: 25px;
+        padding: 10px;
+    }
+
+    #menu ul li a{
+        display: block;
+        transition: all 300ms;
+    }
+
+    #menu ul li a:hover{
+        transform: scale(1.2 , 1.2);
+    }
+
+}
